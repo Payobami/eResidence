@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>eResidence</title>
+     <link rel="stylesheet" href="dist/css/bootstrap.css">
+     <link rel="stylesheet" href="dist/css/nav-offcanvas.css">
+     <link rel="stylesheet" href="dist/css/e_residence.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="row1">
+    <nav class="navbar navbar-blac navbar-offcanvas navbar-offcanvas navbar-border" style="margin-bottom: 10px">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="toggleBtn navbar-toggle collapsed pull-left p-l-20" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="" style="">
+               <!-- <img class="mobileLogo" src="<?php /*echo base_url()*/?>img/logo/logo4.png" width="180">-->
+                <span class="siteName text-black">eResidence</span>
+            </a>
+            <!-- <?php if(!isset($this->session->userPhone)){?> -->
+                <div class="visible-xs mobile-header p-r-20">
+                    <ul>
+                        <li class="no-bg "><a href="map.html" class="text-black"><i class="fa fa-compass"></i>Explore Map</a></li>
+                        <li class="no-bg"><a href="" class="text-black"><i class="fa fa-user-check"></i> Login</a></li>
+                    </ul>
+                </div>
+
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+      <!-- <?php if(!isset($this->session->userPhone)){?> -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right m-t-5">
+                    <li><a href="#" class="text-black">Login</a></li>
+                    <li class="dropdown signUpBg">
+                        <a href="" class="text-white"><i class="fa fa-user-check"></i> Register</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right f-ubuntu m-t-5">
+                    <li><a href="map.html" class="text-black f-ubuntu">Explore Map</a></li>
+                    <li><a href="#"  class="text-black">Help</a></li>
+                    <li><a href="#"  class="text-black">Solutions</a></li>
+
+
+                </ul>
+            </div>
+
+<!--
+        <!-- <?php }else{?>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right m-t-10">
+                    <li class="dropdown hidden-xs no-hover">
+                        <a href="#" class="text-black" data-target="#searchx" data-toggle="modal"><i class="fa fa-search"></i> </a>
+                    </li>
+
+
+                    <li style="margin-top: -5px; border: none; padding-left" class="dropdown no-hover">
+                        <a href="#" class="dropdown-toggle text-black no-hover" data-toggle="dropdown">
+                                    <span class="circleAvatar">
+                                    <img src="#" class="img-circle" width="30" height="30">
+                                </span>
+                            <span class="linkDrop"><b class="text-black"> Hi, Username</b> <i class="glyphicon glyphicon-chevron-down text-black f-w-100 m-t-5"></i> </span>
+                        </a>
+
+                        <ul class="dropdown-menu" style="min-height: 200px">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Profile</a></li>
+                            <li><a href="">Message</a></li>
+                            <li><a href="">Reviews</a></li>
+                            <li><a href="">Settings</a></li>
+                            <li><a href="">Invoice</a></li>
+
+                            <li class="divider"></li>
+                            <li><a href="">Sign out</a></li>
+                        </ul>
+
+
+                    </li>
+
+
+                    <li class="dropdown no-hover">
+                        <a href="#" class="last data-toggle" style="margin-right: 5px" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-bell"></i>
+                            <span class="label label-danger" style="border-radius: 50%; margin-left: -4px;margin-top: -10px !important;position: absolute"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="margin-left: -210px;border-radius: 0; width: 280px;top: 25px;">
+                            <li class="header" style="padding: 10px 10px 25px 10px; font-weight: 700;border-bottom: 1px solid #d2d2d2;height: 35px !important;">You have  notification(s)</li>
+                            <div class="slimScrollDiv" style="min-height: 0; width: 100%;">
+
+                                    <div class="no_notification">
+                                        <h2 style="text-align: center">
+                                            <div class="crossBell"> </div>
+                                            No Notification
+                                        </h2>
+                                        <p></p>
+                                    </div>
+
+
+
+                                <!-- <?php if($count_notification >=1):?>
+                                    <?php foreach($getNotification as $notificate):?>
+                                        <li style="padding: 10px!important;border-bottom: 1px solid #d2d2d2;height: 40px !important;">
+                                            <i class="glyphicon glyphicon-envelope pull-left" style="font-size: 12px !important;color: #7ac81d;"></i> <a href="" class="" style="margin-left: 10px">Message</a>
+                                        </li>
+                                    <?php endforeach ?>
+                                <?php endif?> --
+                            </div>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right m-t-10">
+                    <li><a href="" class="text-black">Home</a></li>
+                    <li><a href="" class="text-black f-ubuntu">Explore</a></li>
+                    <li><a href="#"  class="text-black">Help</a></li>
+                    <li><a href="#"  class="text-black">Solutions</a></li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -- />
+        <?php }?>  -->
+        <!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+
+  <div class="welcomeFeature container">
+      <div class="col-sm-6">
+
+        <div class="jijx">
+          <h2 class="text-red m-t-0 ">eResidence</h2>
+          <p>Open Source Address System in Nigeria</p>
+        </div>
+
+
+      </div>
+      <div class="col-sm-6">
+        <div id="container" class="no-border-radius">
+
+
+        <div class="form searchBox">
+          <div>
+            <h4><i class="fa fa-search text-re"></i> Find a <span class="text-red"> Residence </span> Location</h4>
+          </div>
+          <div class="form-group">
+            <input type="search" class="searchInput" placeholder="Enter a Residence Code (e.g AA001KRD)">
+          </div>
+          <div>
+            <input type="submit" class="btn bg-black btn-sm no-border-radius text-white width100" value="Find and Get Direction">
+          </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+        <div class="clearfix"></div>
+  </div>
+
+</div><!-- end row1 -->
+
+
+<div class="row2">
+  <div class="container">
+    <div class="col-sm-7">
+      <div class="infox">
+        <h1>Simple, easy Address</h1>
+        <p class="m-b-10">Giving address and direction is hard. Give eResidence Number instead</p>
+        <p class="m-t-0 m-b-15">eResidence is another better way to describe a residence and resident information. It means anyone can accurately find your residencial location and share it quickly and easily. </p>
+        <p class="m-t-0 ">This solution work better via free mobile App.</p>
+      </div>
+    </div>
+    <div class="col-sm-5">
+
+    </div>
+  </div>
+</div>
+
+<div class="row3">
+  <div class="container">
+    <div class="">
+      <h3 class="text-center text-white m-t-20 m-b-40">What Our <span style="color: #F9CB4F"> Solutions </span> Offers</h3>
+
+      <div class="col-sm-3">
+        <div class="solutionBox text-center">
+          <img src="img/delivery-truck.png" width="100" class="text-center">
+          <div class="solutionLabel">Logistics and Delivery</div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-3">
+        <div class="solutionBox text-center">
+          <img src="img/address.png" width="100" class="text-center">
+          <div class="solutionLabel">Easy Address System</div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="solutionBox text-center">
+          <img src="img/ambulance.png" width="100" class="text-center">
+          <div class="solutionLabel">Emergence Service</div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="solutionBox text-center">
+          <img src="img/move.png" width="100" class="text-center">
+          <div class="solutionLabel">Direction and Navigation</div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-3">
+        <div class="solutionBox text-center">
+          <img src="img/insurance.png" width="100" class="text-center">
+          <div class="solutionLabel">Property Management</div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-3">
+        <div class="solutionBox text-center">
+          <img src="img/post-office.png" width="100" class="text-center">
+          <div class="solutionLabel">Postal Service</div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-3">
+        <div class="solutionBox text-center">
+          <img src="img/student.png" width="100" class="text-center">
+          <div class="solutionLabel">Students Residence Affairs</div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="solutionBox text-center">
+          <img src="img/catalogue.png" width="100" class="text-center">
+          <div class="solutionLabel">Community Development Support</div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="text-center p-t-30" style="min-height: 100px; margin-top: 30px">
+      <a class="btn background-yellow text-white">Check More</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="row4">
+  <div class="container">
+    <div class="col-sm-6">
+      1
+    </div>
+    <div class="col-sm-6">
+      <h2 class="f-ubuntu"> Get yourself Personal eResident Unique Code <br> Download eResidence Mobile App</h2>
+      <p> </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="row5">
+  <h4 class="text-center text-white m-t-0">Partnerships</h4>
+
+</div>
+
+<div class="row6">
+  <div class="container">
+      <div class="col-sm-6">
+        <h4 class="text m-t-0">Get Address Board</h4>
+        <p class="f-s-16" style="line-height: 28px">Get a Customised Outdoor Address Board with your address Number on it. eResidence Number gives a simple way to talk about location, this make anyone to locate your residence easily. Shop for address board online with different prices. </p>
+
+        <a href="#" class="btn btnYellow">Shop for Board</a>
+      </div>
+
+  </div>
+</div>
+
+
+<div class="footer">
+  <div class="tinyBar"></div>
+
+
+</div>
+
+
+
+
+<!-- <script src="dist/js/jquery.min.js"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src="dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
